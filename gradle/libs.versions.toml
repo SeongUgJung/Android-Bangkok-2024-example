@@ -1,0 +1,37 @@
+[versions]
+agp = "8.7.0"
+kotlin = "1.9.24"
+coreKtx = "1.13.1"
+appcompat = "1.7.0"
+kotlin-serialize = "1.6.3"
+
+firebase-bom = "33.4.0"
+firebase-ktx = "0.2.0"
+
+compose-compiler = "1.5.14"
+
+compose-bom = "2024.09.03"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.9.2" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase.bom" }
+firebase-database-ktx = { group = "com.github.skydoves", name = "firebase-database-ktx", version.ref = "firebase.ktx" }
+
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose.bom" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+
+kotlin-serialize-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin.serialize" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialize = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-playservice = { id = "com.google.gms.google-services", version = "4.4.2" }
+google-secret = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version = "2.0.1" }

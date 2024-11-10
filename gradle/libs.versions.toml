@@ -4,6 +4,7 @@ kotlin = "1.9.24"
 coreKtx = "1.13.1"
 appcompat = "1.7.0"
 kotlin-serialize = "1.6.3"
+kotlin-coroutine = "1.8.1"
 
 firebase-bom = "33.4.0"
 firebase-ktx = "0.2.0"
@@ -12,11 +13,14 @@ compose-compiler = "1.5.14"
 
 compose-bom = "2024.09.03"
 
+androidx-lifecycle = "2.8.3"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.9.2" }
+androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx.lifecycle" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase.bom" }
 firebase-database-ktx = { group = "com.github.skydoves", name = "firebase-database-ktx", version.ref = "firebase.ktx" }
 
@@ -25,9 +29,21 @@ compose-foundation = { module = "androidx.compose.foundation:foundation" }
 compose-animation = { module = "androidx.compose.animation:animation" }
 compose-runtime = { module = "androidx.compose.runtime:runtime" }
 compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-material3 = { module = "androidx.compose.material3:material3" }
 
 kotlin-serialize-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin.serialize" }
+
+kotlin-coroutine-core = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref="kotlin.coroutine"}
+kotlin-coroutine-android = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref="kotlin.coroutine"}
+kotlin-coroutine-test = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref="kotlin.coroutine"}
+
+test-junit5-bom = { module = "org.junit:junit-bom", version = "5.11.3" }
+test-junit5-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
+test-junit5-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
+test-junit5-vintage-engine = { module = "org.junit.vintage:junit-vintage-engine" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -35,3 +51,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialize = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 google-playservice = { id = "com.google.gms.google-services", version = "4.4.2" }
 google-secret = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version = "2.0.1" }
+

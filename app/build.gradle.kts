@@ -55,6 +55,10 @@ android {
     }
 }
 
+tasks.withType<Test>() {
+    useJUnitPlatform()
+}
+
 secrets {
     propertiesFileName = "secrets.properties"
     defaultPropertiesFileName = "secrets.local.properties"
@@ -68,14 +72,27 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.compose)
     implementation(libs.firebase.database.ktx)
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
+    debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.runtime)
     implementation(libs.compose.foundation)
     implementation(libs.compose.material3)
     implementation(libs.compose.animation)
+
+    implementation(libs.kotlin.coroutine.core)
+    implementation(libs.kotlin.coroutine.android)
+
+    testImplementation(libs.kotlin.coroutine.test)
+    testImplementation(platform(libs.test.junit5.bom))
+    testImplementation(libs.test.junit5.jupiter.api)
+    testRuntimeOnly(libs.test.junit5.jupiter.engine)
+    testRuntimeOnly(libs.test.junit5.vintage.engine)
+
 }
 
 apply(plugin = libs.plugins.google.playservice.get().pluginId)

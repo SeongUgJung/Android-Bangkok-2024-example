@@ -1,4 +1,4 @@
-package com.android.bangkok2024.example
+package com.android.bangkok2024.example.firebase
 
 import kotlinx.serialization.Serializable
 

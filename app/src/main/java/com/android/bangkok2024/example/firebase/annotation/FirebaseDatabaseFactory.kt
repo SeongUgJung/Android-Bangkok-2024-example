@@ -1,4 +1,4 @@
-package com.android.bangkok2024.example.annotation
+package com.android.bangkok2024.example.firebase.annotation
 
 import com.google.firebase.Firebase
 import com.google.firebase.database.DatabaseReference
@@ -29,10 +29,8 @@ internal object FirebaseDatabaseFactory {
                 "toString" -> "${proxy.javaClass.getName()}@${
                     System.identityHashCode(proxy).toHexString()
                 }"
-
                 else -> invoker(database, method, args)
             }
-
 
         } as T
     }

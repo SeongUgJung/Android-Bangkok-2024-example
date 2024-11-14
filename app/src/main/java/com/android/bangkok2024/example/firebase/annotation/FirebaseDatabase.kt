@@ -1,4 +1,4 @@
-package com.android.bangkok2024.example.annotation
+package com.android.bangkok2024.example.firebase.annotation
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)

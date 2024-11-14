@@ -1,6 +1,6 @@
 @file:JvmName("HomeScreen")
 
-package com.android.bangkok2024.example
+package com.android.bangkok2024.example.firebase
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,7 +23,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlin.time.Duration.Companion.days
 
 @Composable
-internal fun HomeScreen(oldClassRepo: DataRepo, retrofitishRepo: DataRepo) {
+internal fun FirebaseScreen(oldClassRepo: DataRepo, retrofitishRepo: DataRepo) {
     Row(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
@@ -62,7 +62,7 @@ internal fun HomeScreen(oldClassRepo: DataRepo, retrofitishRepo: DataRepo) {
                     Contact("home-$days", "cell-$days")
                 )
             }) {
-                Text("Update Profile")
+                Text("Update Profile by Impl")
             }
         }
 
@@ -104,7 +104,7 @@ internal fun HomeScreen(oldClassRepo: DataRepo, retrofitishRepo: DataRepo) {
                     Contact("home-$days", "cell-$days")
                 )
             }) {
-                Text("Update Profile")
+                Text("Update Profile by annotation")
             }
         }
 

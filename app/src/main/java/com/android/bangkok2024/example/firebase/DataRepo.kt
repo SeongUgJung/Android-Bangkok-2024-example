@@ -1,8 +1,9 @@
-package com.android.bangkok2024.example
+package com.android.bangkok2024.example.firebase
 
-import com.android.bangkok2024.example.annotation.Child
-import com.android.bangkok2024.example.annotation.Data
-import com.android.bangkok2024.example.annotation.FirebaseDatabase
+import com.android.bangkok2024.example.BuildConfig
+import com.android.bangkok2024.example.firebase.annotation.Child
+import com.android.bangkok2024.example.firebase.annotation.Data
+import com.android.bangkok2024.example.firebase.annotation.FirebaseDatabase
 import com.google.firebase.Firebase
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
